@@ -49,8 +49,5 @@ describe "BookInStock" do
     it "should display 1.1 as $1.10" do
       expect(BookInStock.new('isbn11', 1.1).price_as_string).to eq('$1.10')
     end
-    it "should display 1 as $1.00" do
-	expect(BookInStock.new('isbn2',1).price_as_string).to eq('$1.00')
-    end
   end
 end

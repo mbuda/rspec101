@@ -16,7 +16,12 @@ describe "#sum" do
     expect(sum([1,2,3,4,5])).to eq(15)
     expect(sum([1,2,3,4,-5])).to eq(5)
   end
+
+  it "returns 0" do
+    expect(sum([])).to eq(0)
+  end
 end
+
 describe "#max_2_sum" do
   it "should be defined" do
     expect { max_2_sum([1,2,3]) }.not_to raise_error
@@ -26,8 +31,11 @@ describe "#max_2_sum" do
     expect(max_2_sum([1,2,3,4,5])).to be_a_kind_of(Fixnum)
     expect(max_2_sum([1,2,3,4,100])).to eq(104)
     expect(max_2_sum([1,-2,-3,-4,-5])).to eq(-1)
+    expect(max_2_sum([])).to eq(0)
+    expect(max_2_sum([2])).to eq(2)
   end
 end
+
 describe "#sum_to_n?" do
   it "should be defined" do
     expect { sum_to_n?([1,2,3],4) }.not_to raise_error

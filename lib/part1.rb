@@ -1,11 +1,13 @@
 def sum arr
-  # YOUR CODE HERE
+  arr.reduce(0,:+)
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  arr.sort.last(2).reduce(0,:+)
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  arr.permutation(2).any? do |t|
+    sum(t) == n
+  end
 end

@@ -1,11 +1,11 @@
 def hello(name)
-  # YOUR CODE HERE
+  "Hello, " << name
 end
 
-def starts_with_consonant? s
-  # YOUR CODE HERE
+def starts_with_vowel? s
+  /^[aoieu]/i ===s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  /^[10]*00/ ===s
 end
